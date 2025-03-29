@@ -30,7 +30,7 @@ h1 {
     border: 1px solid #ccc;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .contenedor {
       flex-direction: column;
       align-items: center;
