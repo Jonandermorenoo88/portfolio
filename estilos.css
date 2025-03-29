@@ -1,0 +1,28 @@
+/* Centrado del título */
+h1 {
+    text-align: center;
+  }
+  
+  /* Contenedor de columnas */
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+  }
+  
+  /* Columnas */
+  .columna {
+    width: 40%;
+    padding: 10px;
+  }
+  
+  /* Ajustes específicos */
+  .foto {
+    text-align: center;
+  }
+  
+  .texto {
+    text-align: justify;
+  }
+  
