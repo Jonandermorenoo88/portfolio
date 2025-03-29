@@ -13,16 +13,20 @@ h1 {
   
   /* Columnas */
   .columna {
-    width: 40%;
+    width: 35%;
     padding: 10px;
   }
   
   /* Ajustes específicos */
   .foto {
-    text-align: center;
+    text-align: right;
   }
   
   .texto {
     text-align: justify;
+  }
+
+  .burgos {
+    border: 1px solid #ccc;
   }
   
