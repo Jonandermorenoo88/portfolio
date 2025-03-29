@@ -71,6 +71,14 @@ h1 {
   border: 1px solid #ccc;
 }
 
+.ciber{
+  border: 1px solid #ccc;
+}
+
+.fp{
+  border: 1px solid #ccc;
+}
+
 
   @media (max-width: 600px) {
     .contenedor {
