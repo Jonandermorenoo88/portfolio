@@ -48,10 +48,12 @@ h1 {
   /* Ajustes específicos */
   .foto {
     text-align: right;
+    border: 1px solid #ccc;
   }
   
   .texto {
     text-align: justify;
+    border: 1px solid #ccc;
   }
 
   .burgos {
