@@ -1,6 +1,13 @@
+.navegacion{
+  border: 1px solid #ccc;
+}
 /* Centrado del título */
-h1 {
-    text-align: center;
+.nombre{
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  .menu{
+    border: 1px solid #ccc;
   }
   
   /* Contenedor de columnas */
@@ -28,6 +35,13 @@ h1 {
   }
 
   .burgos {
+    border: 1px solid #ccc;
+  }
+  .linkia{
+    border: 1px solid #ccc;
+  }
+
+  .sanluis{
     border: 1px solid #ccc;
   }
 
