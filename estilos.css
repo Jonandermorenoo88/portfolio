@@ -4,7 +4,6 @@ h1 {
 }
 
 .navegacion {
-  border: 1px solid #ccc;
   display: flex;
   justify-content: space-between; /* Distribuye nombre a la izquierda y menú a la derecha */
   align-items: center; /* Centra verticalmente si hay distintas alturas */
@@ -14,13 +13,11 @@ h1 {
 
 .nombre {
   text-align: center;
-  border: 1px solid #ccc;
   width: 30%;
   color: black;
 }
 
 .menu {
-  border: 1px solid #ccc;
   width: 70%;
   text-align: right; /* Alinea el contenido del menú a la derecha */
   list-style-type: none; /* Quita los puntos por defecto del menú */
@@ -46,7 +43,6 @@ h1 {
   justify-content: center;
   gap: 40px;
   padding: 20px;
-  border: 1px solid #ccc;
 }
   
 /* Columnas */
@@ -58,37 +54,71 @@ h1 {
 /* Ajustes específicos */
 .foto {
   text-align: right;
-  border: 1px solid #ccc;
 }
-  
+
+.columna ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.columna ul li {
+  margin-bottom: 8px;
+}
+
 .texto {
   text-align: justify;
-  border: 1px solid #ccc;
-}
-
-.burgos {
-  border: 1px solid #ccc;
-}
-.linkia{
-  border: 1px solid #ccc;
-}
-
-.sanluis{
-  border: 1px solid #ccc;
-}
-
-.ciber{
-  border: 1px solid #ccc;
-}
-
-.fp{
-  border: 1px solid #ccc;
 }
 
 body.oscuro {
   background-color: #121212;
   color: #f1f1f1;
 }
+
+/* Estilo principal para centrar toda la sección */
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 30px 20px;
+}
+
+/* Centrar cada categoría de habilidades */
+.categoria {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Centrar y espaciar las etiquetas */
+.etiquetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Colores personalizados */
+.azul { background-color: #007bff; }
+.azul-claro { background-color: #17a2b8; }
+.amarillo { background-color: #ffc107; color: black; }
+.rojo { background-color: #dc3545; }
+.verde { background-color: #28a745; }
+.naranja { background-color: #fd7e14; }
+.violeta { background-color: #6f42c1; }
+.gris { background-color: #6c757d; }
+.negro { background-color: #343a40; }
+.verde-agua { background-color: #20c997; }
+
 
 body.oscuro .navegacion,
 body.oscuro .nombre,
@@ -100,8 +130,8 @@ body.oscuro .burgos,
 body.oscuro .linkia,
 body.oscuro .sanluis {
   background-color: #1e1e1e;
-  border-color: #444;
   color: #f1f1f1;
+  border: none;
 }
 
 #modoOscuroBtn {
@@ -199,9 +229,17 @@ body:not(.oscuro) .footer-redes a:hover {
   color: #000;
 }
 
+.columna ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.columna ul li {
+  margin-bottom: 8px;
+}
 
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .contenedor {
     flex-direction: column;
     align-items: center;
