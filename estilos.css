@@ -273,10 +273,14 @@ body:not(.oscuro) .footer-redes a:hover {
   .nombre, .menu {
     width: 100%;
     margin: 5px 0;
+    border: none;
   }
+
   .menu {
     text-align: center;
+    border: none;
   }
+
   .menu ul {
     padding: 0;
   }
@@ -294,7 +298,24 @@ body:not(.oscuro) .footer-redes a:hover {
   .burgos, .linkia, .sanluis, .ciber, .fp {
     width: 100%;
     text-align: center;
+    border: none;
+  }
+
+  /* NUEVO: habilidades responsivas y sin bordes */
+  .habilidades {
+    padding: 10px;
+  }
+
+  .categoria {
+    max-width: 100%;
+    padding: 0 10px;
+    border: none;
+  }
+
+  .etiquetas {
+    justify-content: center;
   }
 }
+
 
   
