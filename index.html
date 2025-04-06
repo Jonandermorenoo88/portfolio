@@ -21,6 +21,7 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
+      <button id="modoOscuroBtn">🌙 Modo oscuro</button>
     </div>
   </header>
 
@@ -73,6 +74,41 @@
     </div>
   </div>
   <h1>Mis habilidades</h1>
+  <h1 id="contacto">Contacto</h1>
 
+  <div class="contenedor">
+    <form action="https://formspree.io/f/xyzebeyn" method="POST" class="formulario-contacto">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="_replyto" required><br><br>
+
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-contenido">
+      <p>&copy; 2025 Jon Ander Moreno. Todos los derechos reservados.</p>
+      <div class="footer-redes">
+        <a href="https://github.com/jonandermorenoo88" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jon-ander-incera-moreno-5a8b6520a/" target="_blank">LinkedIn</a>
+        <a href="mailto:jaincera97@ejemplo.com">Email</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    const boton = document.getElementById('modoOscuroBtn');
+    boton.addEventListener('click', () => {
+      document.body.classList.toggle('oscuro');
+      boton.textContent = document.body.classList.contains('oscuro') ? '☀️ Modo claro' : '🌙 Modo oscuro';
+    });
+  </script>
+  
 </body>
 </html>
