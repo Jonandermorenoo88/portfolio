@@ -344,6 +344,9 @@ h3 {
 
 /* Contact Form */
 .formulario-contacto {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   background-color: var(--bg-card);
   padding: 2.5rem;
   border-radius: 16px;
