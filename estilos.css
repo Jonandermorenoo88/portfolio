@@ -447,3 +447,46 @@ h3 {
     font-size: 2rem;
   }
 }
+/* Proyecto Coming Soon Section */
+.proyecto-coming-soon {
+  justify-content: center;
+}
+
+.coming-soon-card {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  border: 2px dashed var(--primary);
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.coming-soon-card:hover {
+  transform: scale(1.02);
+  border-style: solid;
+}
+
+.coming-soon-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.coming-soon-card p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon-card .subtexto {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
