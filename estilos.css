@@ -1,321 +1,446 @@
-h1 { 
+:root {
+  /* Color Palette - Vibrant & Professional */
+  --primary: #4F46E5;
+  /* Indigo 600 */
+  --primary-hover: #4338CA;
+  /* Indigo 700 */
+  --secondary: #EC4899;
+  /* Pink 500 */
+  --accent: #8B5CF6;
+  /* Violet 500 */
+
+  /* Neutral Colors */
+  --bg-body: #F8FAFC;
+  /* Slate 50 */
+  --bg-card: #FFFFFF;
+  --text-main: #0F172A;
+  /* Slate 900 */
+  --text-muted: #64748B;
+  /* Slate 500 */
+  --border: #E2E8F0;
+  /* Slate 200 */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #4F46E5 0%, #8B5CF6 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Dark Mode Variables */
+body.oscuro {
+  --bg-body: #0F172A;
+  /* Slate 900 */
+  --bg-card: #1E293B;
+  /* Slate 800 */
+  --text-main: #F1F5F9;
+  /* Slate 100 */
+  --text-muted: #94A3B8;
+  /* Slate 400 */
+  --border: #334155;
+  /* Slate 700 */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+}
+
+/* Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
   text-align: center;
-  background-color: #ccc;
+  margin: 3rem 0 1.5rem;
+  background: none;
+  /* Removed gray background */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header & Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s;
+}
+
+body.oscuro header {
+  background-color: rgba(15, 23, 42, 0.8);
 }
 
 .navegacion {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; /* Distribuye nombre a la izquierda y menú a la derecha */
-  align-items: center; /* Centra verticalmente si hay distintas alturas */
-  padding: 5px;
-  background-color: white;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nombre {
-  text-align: center;
-  width: 30%;
-  color: black;
+.menu ul {
+  display: flex;
+  gap: 2rem;
 }
 
-.menu {
-  width: 70%;
-  text-align: right; /* Alinea el contenido del menú a la derecha */
-  list-style-type: none; /* Quita los puntos por defecto del menú */
-  font-size: 25px;
-  margin-right: 30px; /* o el valor que quieras */
-  
+.menu a {
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
-.menu a{
-  color: black;
-  text-decoration: none;
+.menu a:hover {
+  color: var(--primary);
 }
 
-.menu li {
-  display: inline-block;
-  margin-right: 10px;
- }
+/* Button - Dark Mode Toggle */
+#modoOscuroBtn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 500;
+  transition: all 0.2s;
+}
 
-  
-/* Contenedor de columnas */
+#modoOscuroBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Layout Containers */
 .contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 20px;
+  gap: 3rem;
+  align-items: center;
 }
-  
-/* Columnas */
-.columna {
-  width: 35%;
-  padding: 10px;
-}
-  
-/* Ajustes específicos */
+
+/* Hero Section (Acerca de mí) */
 .foto {
-  text-align: right;
-}
-
-.columna ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.columna ul li {
-  margin-bottom: 8px;
-}
-
-.texto {
-  text-align: justify;
-}
-
-body.oscuro {
-  background-color: #121212;
-  color: #f1f1f1;
-}
-
-/* Estilo principal para centrar toda la sección */
-.habilidades {
+  flex: 1;
   display: flex;
+  justify-content: center;
+}
+
+.mostrarfoto img {
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--bg-card);
+  transition: transform 0.3s;
+}
+
+.mostrarfoto img:hover {
+  transform: scale(1.02);
+}
+
+.columna.texto {
+  flex: 2;
+}
+
+.columna.texto p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-align: left;
+  /* Better readability than justify */
+  margin-bottom: 1rem;
+}
+
+.columna.texto strong {
+  color: var(--text-main);
+}
+
+/* Cards (Experiencia & Formación) */
+/* Reusing .contenedor but structuring content better */
+.columna.texto ul {
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.columna.texto ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.columna.texto ul li::before {
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Styling the "Experience" blocks as cards */
+/* Targeting the specific structure: .contenedor .columna.texto h3/p */
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+}
+
+.contenedor .columna.texto p strong {
+  color: var(--text-main);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Wrap experiences in a card-like look? 
+   The current HTML has one .contenedor per job/school. 
+   We can style .contenedor for experience items.
+*/
+.contenedor:has(h3) {
+  /* Modern CSS feature, falls back gracefully */
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  /* Stack vertically for these items */
+}
+
+.contenedor:has(h3):hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Skills Section */
+.habilidades {
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  margin: 2rem auto;
+  box-shadow: var(--shadow-md);
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 30px 20px;
+  text-align: center;
 }
 
-/* Centrar cada categoría de habilidades */
 .categoria {
-  text-align: center;
-  max-width: 800px;
+  margin-bottom: 2rem;
   width: 100%;
 }
 
-/* Centrar y espaciar las etiquetas */
 .etiquetas {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .badge {
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+}
+
+/* Modern Badge Colors */
+.azul {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+}
+
+.azul-claro {
+  background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
+}
+
+.amarillo {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
   color: white;
 }
 
-/* Colores personalizados */
-.azul { background-color: #007bff; }
-.azul-claro { background-color: #17a2b8; }
-.amarillo { background-color: #ffc107; color: black; }
-.rojo { background-color: #dc3545; }
-.verde { background-color: #28a745; }
-.naranja { background-color: #fd7e14; }
-.violeta { background-color: #6f42c1; }
-.gris { background-color: #6c757d; }
-.negro { background-color: #343a40; }
-.verde-agua { background-color: #20c997; }
-
-
-body.oscuro .navegacion,
-body.oscuro .nombre,
-body.oscuro .menu,
-body.oscuro .columna,
-body.oscuro .fp,
-body.oscuro .ciber,
-body.oscuro .burgos,
-body.oscuro .linkia,
-body.oscuro .sanluis {
-  background-color: #121212;
-  color: #f1f1f1;
-  border: none;
+.rojo {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
 }
 
-#modoOscuroBtn {
-  margin: 10px;
-  padding: 8px 16px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
-  border: none;
+.verde {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
 }
 
-body.oscuro #modoOscuroBtn {
-  background-color: #eee;
-  color: #121212;
+.naranja {
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
 }
 
-body.oscuro .menu a {
-  color: #f1f1f1;
+.violeta {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
 }
 
+.gris {
+  background: linear-gradient(135deg, #64748B 0%, #475569 100%);
+}
+
+.negro {
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+}
+
+.verde-agua {
+  background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+}
+
+/* Contact Form */
 .formulario-contacto {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.formulario-contacto label {
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .formulario-contacto input,
 .formulario-contacto textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: inherit;
+  transition: border-color 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: var(--primary);
 }
 
 .formulario-contacto button {
-  padding: 10px;
-  background-color: #007BFF;
+  width: 100%;
+  padding: 1rem;
+  background: var(--gradient-primary);
   color: white;
+  font-weight: 700;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  transition: opacity 0.2s;
 }
 
 .formulario-contacto button:hover {
-  background-color: #0056b3;
+  opacity: 0.9;
 }
 
+/* Footer */
 .footer {
-  background-color: #1e1e1e;
-  color: white;
-  padding: 20px 10px;
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  padding: 3rem 1rem;
   text-align: center;
-  font-size: 14px;
-  margin-top: 40px;
-}
-
-.footer-contenido {
-  max-width: 900px;
-  margin: 0 auto;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
 }
 
 .footer-redes {
-  margin-top: 10px;
+  margin-top: 1.5rem;
 }
 
 .footer-redes a {
   margin: 0 10px;
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
+  font-weight: 600;
+  color: var(--primary);
 }
 
 .footer-redes a:hover {
-  color: #ffffff;
+  text-decoration: underline;
 }
 
-/* Modo claro */
-body:not(.oscuro) .footer {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-body:not(.oscuro) .footer-redes a {
-  color: #555;
-}
-
-body:not(.oscuro) .footer-redes a:hover {
-  color: #000;
-}
-
-.columna ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.columna ul li {
-  margin-bottom: 8px;
-}
-
-
-@media (max-width: 850px) {
-  .contenedor {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .columna {
-    width: 100%;
-    text-align: center;
-  }
-
-  .texto {
-    text-align: justify;
-    padding: 0 10px;
-  }
-
-  .mostrarfoto img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 10px;
-  }
-
+/* Responsive */
+@media (max-width: 768px) {
   .navegacion {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .nombre, .menu {
-    width: 100%;
-    margin: 5px 0;
-    border: none;
-  }
-
-  .menu {
-    text-align: center;
-    border: none;
+    gap: 1rem;
   }
 
   .menu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
     padding: 0;
   }
 
-  .menu li {
-    display: block;
-    margin: 8px 0;
+  .contenedor {
+    flex-direction: column;
+    padding: 1.5rem;
   }
 
-  #modoOscuroBtn {
-    width: 80%;
-    margin: 10px auto;
+  .foto {
+    margin-bottom: 2rem;
   }
 
-  .burgos, .linkia, .sanluis, .ciber, .fp {
-    width: 100%;
-    text-align: center;
-    border: none;
-  }
-
-  /* NUEVO: habilidades responsivas y sin bordes */
-  .habilidades {
-    padding: 10px;
-  }
-
-  .categoria {
-    max-width: 100%;
-    padding: 0 10px;
-    border: none;
-  }
-
-  .etiquetas {
-    justify-content: center;
+  h1 {
+    font-size: 2rem;
   }
 }
-
-
-  
