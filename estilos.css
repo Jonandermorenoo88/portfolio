@@ -416,9 +416,30 @@ h3 {
   color: var(--primary);
 }
 
+
 .footer-redes a:hover {
   text-decoration: underline;
 }
+
+/* CV Download Button */
+.boton-descargar {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.boton-descargar:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: white;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
